@@ -1,4 +1,4 @@
-package numbersystem;
+package basicmaths;
 
 public class SumOfDigits {
     public static void main(String[] args) {

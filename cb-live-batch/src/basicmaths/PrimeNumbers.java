@@ -1,4 +1,4 @@
-package numbersystem;
+package basicmaths;
 
 import java.util.Scanner;
 
