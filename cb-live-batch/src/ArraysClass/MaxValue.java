@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysClass;
 
 import java.util.Scanner;
 

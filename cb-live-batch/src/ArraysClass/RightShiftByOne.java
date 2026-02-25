@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysClass;
 
 public class RightShiftByOne {
     public static void rotate(int[] arr){

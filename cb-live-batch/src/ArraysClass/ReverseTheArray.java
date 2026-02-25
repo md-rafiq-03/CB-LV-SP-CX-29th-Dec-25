@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysClass;
 
 public class ReverseTheArray {
     public static void swap(int[] arr , int i , int j){

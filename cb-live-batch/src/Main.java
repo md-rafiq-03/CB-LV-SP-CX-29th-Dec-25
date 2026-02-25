@@ -2,39 +2,27 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
 public class Main {
-    static StringBuilder sb = new StringBuilder();
-
-    public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
-        Thread t1 = new Thread(() -> {
-            for(int i = 0; i < 10; i++) {
-                sb.append("A");
-                try {
-                    Thread.sleep(100);
-                }catch (Exception ex) {};
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        int i = 0;
+        while (i < n) {
+            int j = 0;
+            int product = 1;
+            while (j < n) {
+                if (i != j) {
+                    product = product * a[j];
+                }
+                j++;
             }
-        });
-
-        Thread t2 = new Thread(() -> {
-            for(int i = 0; i < 10; i++) {
-                sb.append("B");
-                try {
-                    Thread.sleep(100);
-                }catch (Exception ex) {};
-            }
-        });
-        t1.start();
-        t2.start();
-
-        try {
-            t1.join();
-        }catch (Exception ex) {};
-        try {
-            t2.join();
-        }catch (Exception ex) {};
-
-        System.out.println(sb.toString());
-        System.out.println(sb.length());
+            System.out.print(product + " ");
+            i++;
+        }
     }
 }

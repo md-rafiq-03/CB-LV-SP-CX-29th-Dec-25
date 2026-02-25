@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysClass;
 
 public class PassByValue {
     // pass by ref ku nahi hai

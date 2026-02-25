@@ -29,9 +29,6 @@ public class ProductExceptSelf {
         }
         int[] ans = new int[n]; // output -> not included in space
         for(int i =0;i<n;i++){
-            // i = 0 and i==n-1
-            // i-1=0-1=-1
-            // i+1 = n-1+1 = n
             if(i==0){
                 ans[i] = rp[i+1];
             }else if(i==n-1){
