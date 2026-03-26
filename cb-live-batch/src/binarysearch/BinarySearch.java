@@ -1,7 +1,6 @@
 package binarysearch;
 
 public class BinarySearch {
-
     private static int BinarySearch(int[] arr,int element){
         int n = arr.length;
         int lo = 0;
