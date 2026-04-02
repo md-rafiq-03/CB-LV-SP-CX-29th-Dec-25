@@ -1,4 +1,4 @@
-package oops;
+package queues;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

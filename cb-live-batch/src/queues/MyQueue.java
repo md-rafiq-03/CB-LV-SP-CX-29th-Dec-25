@@ -1,4 +1,4 @@
-package oops;
+package queues;
 
 public class MyQueue {
     private final int[] queue;
