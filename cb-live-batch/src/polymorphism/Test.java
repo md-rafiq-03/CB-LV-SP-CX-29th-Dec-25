@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
-    public static void main(String[] args) {
+
+    private static void m() throws  Exception{
+        throw  new InvalidNameException("Name is invalid !!");
+    }
+
+    public static void main(String[] args) throws Exception {
         Calculator calculator = new Calculator();
         System.out.println(calculator.add(10,20));
         System.out.println(calculator.add(10.0, 20.0));
@@ -44,5 +49,11 @@ public class Test {
         // singleton classes
         // Immutable Classes
         // MultiThreading
+
+        List<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        Exception exception = new Exception();
+        m();
+
     }
 }
