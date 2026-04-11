@@ -10,6 +10,9 @@ public class Main {
         Queue<Integer> queue = new ArrayDeque<>();
         Monkey monkey = new Monkey();
         System.out.println(monkey.getColor());
+
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.addFirst(10);
     }
 
 }
