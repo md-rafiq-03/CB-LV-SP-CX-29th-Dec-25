@@ -4,15 +4,28 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import java.util.*;
+
 public class Main {
     public static void main(String args[]) {
-        Queue<Integer> queue = new ArrayDeque<>();
-        Monkey monkey = new Monkey();
-        System.out.println(monkey.getColor());
+        int[] a = {10,20,30,40,50};
+        int[] b = {2,5,0,8, 10};
+        int[] q = new int[5];
+        for(int i=0;i<5;i++){
+            try {
+                q[i] = getQuotient(a[i], b[i]);
+                System.out.println(q[i]);
+            } catch (Exception xyz) {
+                //System.out.println("Exception: " + xyz.getMessage());
+                throw xyz;
+            }
+            finally {
+                System.out.println(a[i] + " " + b[i]);
+            }
+        }
+    }
 
-        LinkedList<Integer> ll = new LinkedList<>();
-        ll.addFirst(10);
+    private static int getQuotient(int a, int b){
+        return a/b;
     }
 
 }

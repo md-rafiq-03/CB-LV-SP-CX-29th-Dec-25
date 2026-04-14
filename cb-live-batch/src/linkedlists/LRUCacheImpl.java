@@ -38,13 +38,12 @@ public class LRUCacheImpl {
 
         private void delete(Node node){
             size--;
+            //cache.remove(node.key);
             Node prevNode = node.prev;
             Node nextNode = node.next;
 
             prevNode.next = nextNode;
             nextNode.prev = prevNode;
-
-            cache.remove(node.key);
 
         }
 
@@ -59,7 +58,8 @@ public class LRUCacheImpl {
             newNode.next = ahead;
             ahead.prev = newNode;
 
-            cache.put(key, newNode);
+            //cache.put(key, newNode);
+            // node returned
         }
 
         public int get(int key) {
@@ -68,8 +68,8 @@ public class LRUCacheImpl {
             }
             Node node = cache.get(key);
             int value = node.val;
-            insert(key, value);
             delete(node);
+            insert(key, value);
             return value;
         }
 
@@ -78,8 +78,10 @@ public class LRUCacheImpl {
                 delete(cache.get(key));
             }
             insert(key, value);
+            // put in cache
 
             if(size>cap){
+                // remove from cache
                 delete(tail.prev);
             }
         }
