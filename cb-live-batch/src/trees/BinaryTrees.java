@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class BinaryTrees {
@@ -48,6 +50,35 @@ public class BinaryTrees {
         int rmax= findMax(root.right);
         // calculation
         return Math.max(root.data, Math.max(lmax, rmax));
+    }
+
+    public void levelOrder(Node root){
+        Queue<Node> q = new ArrayDeque<>();
+        q.offer(root);
+
+        while(!q.isEmpty()){
+            int size = q.size();
+            while(size-->0) {
+                Node node = q.poll();
+                System.out.print(node.data + ", ");
+                if (node.left != null) {
+                    q.offer(node.left);
+                }
+
+                if (node.right != null) {
+                    q.offer(node.right);
+                }
+            }
+        }
+    }
+
+    public boolean findElementInBT(Node root, int element){
+        if(root==null)
+            return false;
+        if(root.data==element)
+            return true;
+        return findElementInBT(root.left, element)
+                || findElementInBT(root.right, element);
     }
 
 }

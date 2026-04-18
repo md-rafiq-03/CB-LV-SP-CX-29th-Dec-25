@@ -23,5 +23,7 @@ public class BinaryTreeClient {
         binaryTrees.preOrder(root);
         System.out.println();
         binaryTrees.inOrder(root);
+        System.out.println();
+        binaryTrees.levelOrder(root);
     }
 }
