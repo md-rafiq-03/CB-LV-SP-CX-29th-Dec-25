@@ -23,12 +23,18 @@ public class BTLevelOrderTraversal {
             if(root==null)
                 return list;
             q.offer(root);
+            List<Integer> result = new ArrayList<>();
             while(!q.isEmpty()){
                 int size = q.size();
                 List<Integer> temp = new ArrayList<>();
+                boolean flag = true;
                 while(size-->0) {
                     TreeNode node = q.poll();
                     temp.add(node.val);
+                    if(flag==true){
+                        result.add(node.val);
+                        flag=false;
+                    }
                     if (node.left != null) {
                         q.offer(node.left);
                     }
