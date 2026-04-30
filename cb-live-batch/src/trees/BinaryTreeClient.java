@@ -17,13 +17,17 @@ public class BinaryTreeClient {
 //        System.out.println(root.right.left);
 //        System.out.println(root.right.right);
 
-        BinaryTrees binaryTrees = new BinaryTrees();
-        Node root = binaryTrees.createTree();
+//        BinaryTrees binaryTrees = new BinaryTrees();
+//        Node root = binaryTrees.createTree();
+//
+//        binaryTrees.preOrder(root);
+//        System.out.println();
+//        binaryTrees.inOrder(root);
+//        System.out.println();
+//        binaryTrees.levelOrder(root);
 
-        binaryTrees.preOrder(root);
-        System.out.println();
-        binaryTrees.inOrder(root);
-        System.out.println();
-        binaryTrees.levelOrder(root);
+        TreeFromLevelOrderTraversal treeFromLevelOrderTraversal = new TreeFromLevelOrderTraversal();
+        treeFromLevelOrderTraversal.createTree();
+        treeFromLevelOrderTraversal.levelOrder();
     }
 }
